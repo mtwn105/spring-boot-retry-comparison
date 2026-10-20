@@ -1,0 +1,18 @@
+spring:
+  main:
+    web-application-type: none
+    banner-mode: "off"
+logging:
+  level:
+    root: WARN
+resilience4j:
+  retry:
+    instances:
+      inventory:
+        max-attempts: 3
+        wait-duration: 100ms
+        enable-exponential-backoff: true
+        exponential-backoff-multiplier: 2
+        exponential-max-wait-duration: 1s
+        retry-exceptions:
+          - dev.mtwn105.retry.common.TransientInventoryException

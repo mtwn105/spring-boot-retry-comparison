@@ -1,0 +1,153 @@
+{
+  "evidence": "Summary of local Maven Surefire XML reports inspected after the author ran the build; excludes system properties.",
+  "suites": [
+    {
+      "module": "failsafe-demo",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "dev.mtwn105.retry.failsafe.InventoryRetryTest",
+          "name": "backoffSeparatesCallsAndGrowsExponentially"
+        },
+        {
+          "class": "dev.mtwn105.retry.failsafe.InventoryRetryTest",
+          "name": "permanentFailureIsNeverRetried"
+        },
+        {
+          "class": "dev.mtwn105.retry.failsafe.InventoryRetryTest",
+          "name": "exhaustionStopsAtThreeAndPropagatesLastOriginalFailure"
+        },
+        {
+          "class": "dev.mtwn105.retry.failsafe.InventoryRetryTest",
+          "name": "immediateSuccessMakesOneCall"
+        },
+        {
+          "class": "dev.mtwn105.retry.failsafe.InventoryRetryTest",
+          "name": "twoTransientFailuresRecoverOnThirdCall"
+        },
+        {
+          "class": "dev.mtwn105.retry.failsafe.InventoryRetryTest",
+          "name": "retryStateDoesNotLeakAcrossLogicalOperations"
+        },
+        {
+          "class": "dev.mtwn105.retry.failsafe.InventoryRetryTest",
+          "name": "explicitPolicyStillRunsOnSelfInvocation"
+        }
+      ]
+    },
+    {
+      "module": "resilience4j-demo",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "dev.mtwn105.retry.resilience4j.InventoryRetryTest",
+          "name": "backoffSeparatesCallsAndGrowsExponentially"
+        },
+        {
+          "class": "dev.mtwn105.retry.resilience4j.InventoryRetryTest",
+          "name": "permanentFailureIsNeverRetried"
+        },
+        {
+          "class": "dev.mtwn105.retry.resilience4j.InventoryRetryTest",
+          "name": "exhaustionStopsAtThreeAndPropagatesLastOriginalFailure"
+        },
+        {
+          "class": "dev.mtwn105.retry.resilience4j.InventoryRetryTest",
+          "name": "immediateSuccessMakesOneCall"
+        },
+        {
+          "class": "dev.mtwn105.retry.resilience4j.InventoryRetryTest",
+          "name": "twoTransientFailuresRecoverOnThirdCall"
+        },
+        {
+          "class": "dev.mtwn105.retry.resilience4j.InventoryRetryTest",
+          "name": "retryStateDoesNotLeakAcrossLogicalOperations"
+        },
+        {
+          "class": "dev.mtwn105.retry.resilience4j.InventoryRetryTest",
+          "name": "selfInvocationBypassesAnnotationAdvice"
+        }
+      ]
+    },
+    {
+      "module": "spring-framework-retry-demo",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "dev.mtwn105.retry.frameworkretry.InventoryRetryTest",
+          "name": "backoffSeparatesCallsAndGrowsExponentially"
+        },
+        {
+          "class": "dev.mtwn105.retry.frameworkretry.InventoryRetryTest",
+          "name": "permanentFailureIsNeverRetried"
+        },
+        {
+          "class": "dev.mtwn105.retry.frameworkretry.InventoryRetryTest",
+          "name": "exhaustionStopsAtThreeAndPropagatesLastOriginalFailure"
+        },
+        {
+          "class": "dev.mtwn105.retry.frameworkretry.InventoryRetryTest",
+          "name": "immediateSuccessMakesOneCall"
+        },
+        {
+          "class": "dev.mtwn105.retry.frameworkretry.InventoryRetryTest",
+          "name": "twoTransientFailuresRecoverOnThirdCall"
+        },
+        {
+          "class": "dev.mtwn105.retry.frameworkretry.InventoryRetryTest",
+          "name": "retryStateDoesNotLeakAcrossLogicalOperations"
+        },
+        {
+          "class": "dev.mtwn105.retry.frameworkretry.InventoryRetryTest",
+          "name": "selfInvocationBypassesAnnotationAdvice"
+        }
+      ]
+    },
+    {
+      "module": "spring-retry-demo",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "dev.mtwn105.retry.springretry.InventoryRetryTest",
+          "name": "backoffSeparatesCallsAndGrowsExponentially"
+        },
+        {
+          "class": "dev.mtwn105.retry.springretry.InventoryRetryTest",
+          "name": "permanentFailureIsNeverRetried"
+        },
+        {
+          "class": "dev.mtwn105.retry.springretry.InventoryRetryTest",
+          "name": "exhaustionStopsAtThreeAndPropagatesLastOriginalFailure"
+        },
+        {
+          "class": "dev.mtwn105.retry.springretry.InventoryRetryTest",
+          "name": "immediateSuccessMakesOneCall"
+        },
+        {
+          "class": "dev.mtwn105.retry.springretry.InventoryRetryTest",
+          "name": "twoTransientFailuresRecoverOnThirdCall"
+        },
+        {
+          "class": "dev.mtwn105.retry.springretry.InventoryRetryTest",
+          "name": "retryStateDoesNotLeakAcrossLogicalOperations"
+        },
+        {
+          "class": "dev.mtwn105.retry.springretry.InventoryRetryTest",
+          "name": "selfInvocationBypassesAnnotationAdvice"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+Implementation: Spring Retry
+immediate-success attempts=1 outcome=IN_STOCK offsetsMs=[0.0]
+fail-twice-then-success attempts=3 outcome=IN_STOCK offsetsMs=[0.0, 101.3, 301.8]
+exhausted attempts=3 outcome=TransientInventoryException offsetsMs=[0.0, 100.5, 301.2]
+permanent-error attempts=1 outcome=PermanentInventoryException offsetsMs=[0.0]
+All four scenario contracts passed.
+
+Implementation: Spring Framework retry
+immediate-success attempts=1 outcome=IN_STOCK offsetsMs=[0.0]
+fail-twice-then-success attempts=3 outcome=IN_STOCK offsetsMs=[0.0, 103.7, 304.3]
+exhausted attempts=3 outcome=TransientInventoryException offsetsMs=[0.0, 100.5, 301.0]
+permanent-error attempts=1 outcome=PermanentInventoryException offsetsMs=[0.0]
+All four scenario contracts passed.
+
+Implementation: Resilience4j
+immediate-success attempts=1 outcome=IN_STOCK offsetsMs=[0.0]
+fail-twice-then-success attempts=3 outcome=IN_STOCK offsetsMs=[0.0, 114.4, 317.0]
+exhausted attempts=3 outcome=TransientInventoryException offsetsMs=[0.0, 100.6, 301.0]
+permanent-error attempts=1 outcome=PermanentInventoryException offsetsMs=[0.0]
+All four scenario contracts passed.
+
+Implementation: Failsafe
+immediate-success attempts=1 outcome=IN_STOCK offsetsMs=[0.0]
+fail-twice-then-success attempts=3 outcome=IN_STOCK offsetsMs=[0.0, 101.3, 301.6]
+exhausted attempts=3 outcome=TransientInventoryException offsetsMs=[0.0, 100.4, 301.0]
+permanent-error attempts=1 outcome=PermanentInventoryException offsetsMs=[0.0]
+All four scenario contracts passed.
